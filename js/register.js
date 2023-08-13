@@ -10,10 +10,11 @@ bot.addEventListener("click", e => {
     let usuario = document.querySelector("#usuario").value
     let pass1 = document.querySelector("#pass1").value
     let pass2 = document.querySelector("#pass2").value
+    let img = document.querySelector("#img").value
 
 
     
-    let val = validar(nombre, apellido, email, edad, usuario, pass1, pass2)
+    let val = validar(nombre, apellido, email, edad, usuario, pass1, pass2,img)
     if (val) {
         if(localStorage.getItem(clave)){
             usuarios = []
@@ -23,7 +24,7 @@ bot.addEventListener("click", e => {
                 usuarios.push(e)            
             });
         }
-        usuarios.push(new User(usuarios.length + 1, usuario, pass1, nombre, apellido, edad, email))
+        usuarios.push(new User(usuarios.length + 1, usuario, pass1, nombre, apellido, edad, email,img))
         if (localStorage.getItem(clave)) {
 
             let local_user = JSON.stringify(usuarios)
@@ -38,14 +39,14 @@ bot.addEventListener("click", e => {
 
 })
 
-function validar(nombre, apellido, email, edad, usuario, pass1, pass2) {
+function validar(nombre, apellido, email, edad, usuario, pass1, pass2,img) {
     flag = true
     usuarios.forEach(e => {
         if (usuario == e.usuario) {
             flag = false;
         }
     });
-    if (nombre == "" || apellido == "" || email == "" || edad == 0 || isNaN(edad) || usuario == "" || pass1 == "" || pass2 == "") {
+    if (nombre == "" || apellido == "" || email == "" || edad == 0 || isNaN(edad) || usuario == "" || pass1 == "" || pass2 == ""|| img == "") {
         Toastify({
             text: "Debes completar todos los campos o edad incorrecta",
             duration: 3000,

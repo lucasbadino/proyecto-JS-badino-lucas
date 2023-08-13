@@ -14,6 +14,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../css/style_turnos.css">
     <title>Badino Automotores</title>
 </head>
@@ -35,8 +36,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Navbar brand -->
                     <a class="navbar-brand mt-2 mt-lg-0" href="../pages/inicio.html">
-                        <img src="https://png.pngtree.com/png-clipart/20220909/original/pngtree-letter-b-design-png-png-image_8497195.png" height="15"
-                            alt="MDB Logo" loading="lazy" />
+                        <img src="https://png.pngtree.com/png-clipart/20220909/original/pngtree-letter-b-design-png-png-image_8497195.png"
+                            height="15" alt="MDB Logo" loading="lazy" />
                     </a>
                     <!-- Left links -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -50,10 +51,13 @@
                             <a class="nav-link" href="../pages/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/gestion.html">Gestionar</a>
+                            <a class="nav-link" href="../pages/gestion.html">Cargar productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/turnos.html">Turnos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/turnos_contactos.html">Gestor</a>
                         </li>
 
                     </ul>
@@ -71,8 +75,8 @@
                     </a>
                     <!-- Avatar -->
                     <div class="dropdown" id="avatar-user">
-                  
-                  
+
+
                     </div>
                 </div>
                 <!-- Right elements -->
@@ -86,7 +90,7 @@
             <div class="row">
                 <div class="col-md-2"> </div>
                 <div class="col-md-8">
-                    <h1 class="text-center">Gestionar Turnos</h1>
+                    <h1 class="text-center">Cargar productos Turnos</h1>
                     <p class="lead text-center">Queres realizar un servicio a tu vehiculo?</p>
 
                     <p class="text-center">Reserva 100% online.</p> <br>
@@ -94,8 +98,9 @@
                     <!-- BEGIN DOWNLOAD PANEL -->
                     <div class="panel panel-default well">
                         <div class="panel-body">
-                            <form id="form-turnos" action="" class="form-horizontal track-event-form bv-form" data-goaltype="”General”"
-                                data-formname="”ContactUs”" method="post" id="contact-us-all" novalidate="novalidate">
+                            <form id="form-turnos" action="" class="form-horizontal track-event-form bv-form"
+                                data-goaltype="”General”" data-formname="”ContactUs”" method="post" id="contact-us-all"
+                                novalidate="novalidate">
                                 <input name="elqSiteId" type="hidden" value="928">
                                 <input name="sFDCLastCampaignID" type="hidden" value="701400000012Lql">
                                 <input name="elqFormName" type="hidden" value="EMEAAllContactUsSubmissions">
@@ -135,8 +140,7 @@
                                                 <i class="fa fa-envelope"></i>
                                             </div>
                                             <input type="text" class="form-control" id="exampleInputEmail1"
-                                                placeholder="Email" name="email"
-                                                data-bv-field="C_EmailAddress">
+                                                placeholder="Email" name="email" data-bv-field="C_EmailAddress">
                                         </div>
                                         <small data-bv-validator="notEmpty" data-bv-validator-for="C_EmailAddress"
                                             class="help-block" style="display: none;">Required</small>
@@ -158,8 +162,7 @@
                                                 <i class="fa fa-envelope"></i>
                                             </div>
                                             <input type="text" class="form-control" id="exampleInputEmail1"
-                                                placeholder="Marca-Modelo" name="marca"
-                                                data-bv-field="C_EmailAddress">
+                                                placeholder="Marca-Modelo" name="marca" data-bv-field="C_EmailAddress">
                                         </div>
                                         <small data-bv-validator="notEmpty" data-bv-validator-for="C_EmailAddress"
                                             class="help-block" style="display: none;">Required</small>
@@ -203,7 +206,7 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar fa-2"></i>
                                             </div>
-                                            <input id="fecha" name="data"type="datetime-local">
+                                            <input id="fecha" name="data" type="datetime-local">
                                         </div>
                                     </div>
                                 </div>
@@ -275,6 +278,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../js/carrito.js"></script>
     <script src="../js/productos.js"></script>
     <script src="../js/usuarios.js"></script>
