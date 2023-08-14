@@ -30,10 +30,19 @@ form.addEventListener("submit", e => {
     )
     let val = validar_data(data.nombre, data.apellido, data.email, data.patente, data.marca, data.año, data.telefono, data.comentario, data.data)
     if (val) {
+        if (localStorage.getItem(clave)) {
+            turnos = []
+            let nuevo_arreglo = localStorage.getItem(clave)
+            nuevo_arreglo = JSON.parse(nuevo_arreglo)
+            nuevo_arreglo.forEach(e => {
+                turnos.push(e)
+            })
+        }
         turnos.push(new Turno(turnos.length + 1, data.nombre, data.apellido, data.email, data.patente, data.marca, data.año, data.telefono, data.comentario, data.data))
-        localStorage.setItem(clave, "")
-            let nuev_turno = JSON.stringify(turnos)
-            localStorage.setItem(clave, nuev_turno)
+        let nuevo_arreglo = JSON.stringify(turnos)
+        localStorage.setItem(clave, nuevo_arreglo)
+
+
         Toastify({
             text: "Turno registrado",
             duration: 3000,

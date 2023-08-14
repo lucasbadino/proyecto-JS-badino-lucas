@@ -20,7 +20,7 @@ if (localStorage.getItem("turnos")) {
                     <span class="widget-49-pro-title">Vehiculo: ${e.marca_modelo.toUpperCase()}</span>
                     <span class="widget-49-pro-title">Año: ${e.anio}</span>
                     <span class="widget-49-pro-title">Patente: ${e.dominio.toUpperCase()}</span>
-                    <span class="widget-49-meeting-time">Solicito: ${e.comment}</span>
+                    <span class="widget-49-meeting-time">Solicito: ${e.comentario}</span>
                 </div>
             </div>
             <ol class="widget-49-meeting-points">
@@ -54,19 +54,24 @@ if (localStorage.getItem("contactos")) {
     arr_contactos = JSON.parse(arr_contactos)
     arr_contactos.forEach(e => {
         let nuevo_contactos = document.createElement("div")
-        nuevo_contactos.classList.add("d-flex")
         nuevo_contactos.innerHTML = `
-        <div class="col-md-4 col-sm-6 content-card">
-        <div class="card-big-shadow">
-            <div class="card card-just-text" data-background="color" data-color="blue" data-radius="none">
-                <div class="content">
-                    <h6 class="category">Best cards</h6>
-                    <h4 class="title"><a href="#">Blue Card</a></h4>
-                    <p class="description">What all of these have in common is that they're pulling information out of the app or the service and making it relevant to the moment. </p>
+        <div class="row d-flex justify-content-center">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-body m-3">
+                            <div class="row">                          
+                                <div class="col-lg-8">
+                                    <p class="text-muted fw-light mb-4">
+                                        ${e.nombre.toUpperCase()}
+                                    </p>
+                                    <p class="fw-bold lead mb-2"><strong>${e.comentario.toUpperCase()}</strong></p>
+                                    <p class="fw-bold text-muted mb-0">${e.motivo.toUpperCase()}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div> <!-- end card -->
-        </div>
-    </div>
+            </div>
     
                             `
                             card_contactos.appendChild(nuevo_contactos)

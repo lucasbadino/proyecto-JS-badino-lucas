@@ -23,7 +23,7 @@ form.addEventListener("submit", e => {
     )
     let val = validar_data(data.nombre, data.email, data.motivo, data.comentario)
     if (val) {
-        contactos.push(new Contacto(contactos.length + 1, data.nombre, data.apellido, data.email, data.patente, data.marca, data.año, data.telefono, data.comentario, data.data))
+        contactos.push(new Contacto(contactos.length + 1, data.nombre, data.email, data.motivo, data.comentario))
         localStorage.setItem("contactos", "")
             let nuev_contacto = JSON.stringify(contactos)
             localStorage.setItem("contactos", nuev_contacto)

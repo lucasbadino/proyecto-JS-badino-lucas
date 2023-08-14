@@ -19,13 +19,10 @@ if(localStorage.getItem(clave3)){
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                                 <li>
-                                  <a class="dropdown-item" href="#">My profile</a>
+                                  <a class="dropdown-item" href="../pages/perfil.html">Mi perfil</a>
                                 </li>
                                 <li>
-                                  <a class="dropdown-item" href="#">Settings</a>
-                                </li>
-                                <li>
-                                  <a class="dropdown-item" href="../index.html">Logout</a>
+                                  <a class="dropdown-item" href="../index.html">Cerrar Sesiòn</a>
                                 </li>
                               </ul>
             
