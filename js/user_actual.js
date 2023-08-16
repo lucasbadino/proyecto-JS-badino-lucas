@@ -22,7 +22,7 @@ if(localStorage.getItem(clave3)){
                                   <a class="dropdown-item" href="../pages/perfil.html">Mi perfil</a>
                                 </li>
                                 <li>
-                                  <a class="dropdown-item" href="../index.html">Cerrar Sesiòn</a>
+                                  <a id="cerrar_sesion" class="dropdown-item" href="../index.html">Cerrar Sesiòn</a>
                                 </li>
                               </ul>
             
@@ -32,3 +32,13 @@ if(localStorage.getItem(clave3)){
         
     });
 }
+
+
+let cerrar_sesion = document.querySelector("#cerrar_sesion")
+cerrar_sesion.addEventListener("click", e =>{
+  e.preventDefault()
+  localStorage.setItem("contactos","")
+  localStorage.setItem("turnos","")
+  localStorage.setItem("carrito","")
+  window.location.href = "../index.html";
+})

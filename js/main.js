@@ -7,6 +7,7 @@ buscador()
 
 
 
+
 function formatear_html(valor) {
     while (valor.firstChild) {
         valor.removeChild(valor.firstChild)

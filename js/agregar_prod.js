@@ -5,7 +5,6 @@ agregar_producto()
 
 
 
-
 function agregar_producto() {
     if (localStorage.getItem(clave)) {
         productos = []
@@ -32,4 +31,7 @@ function agregar_producto() {
         
 
 }
+
+
+
 

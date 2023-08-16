@@ -1,0 +1,32 @@
+#dolar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.dolar-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px; /* Ajusta el ancho según tus preferencias */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea el contenido al centro horizontalmente */
+}
+
+.dolar-card h5 {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #444;
+    color: white;
+    padding: 5px;
+    margin: 0;
+}
+
+.dolar-card p {
+    background-color: #f0f0f0;
+    padding: 3px;
+    margin: 0;
+}
